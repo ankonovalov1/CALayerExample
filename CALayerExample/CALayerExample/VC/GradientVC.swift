@@ -16,11 +16,11 @@ class GradientVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func viewDidLayoutSubviews() {
-        gradientLayer.frame = view.frame
+        gradientLayer.frame = self.view.frame
     }
     
 }

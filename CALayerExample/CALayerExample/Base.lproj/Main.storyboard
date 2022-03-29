@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BaseVC" customModule="CALayerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-Qi-O2s">
-                                <rect key="frame" x="112.66666666666669" y="507" width="150" height="32"/>
+                                <rect key="frame" x="85" y="486" width="150" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="ozx-I4-LWy"/>
                                 </constraints>
@@ -27,31 +27,31 @@
                                     <color key="baseBackgroundColor" systemColor="labelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="qRr-EE-JU3" kind="show" id="OZN-X9-ocY"/>
+                                    <action selector="openTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZwT-sv-tvI"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food_image" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-F9-lZB">
-                                <rect key="frame" x="62.666666666666657" y="120" width="249.99999999999997" height="250"/>
+                                <rect key="frame" x="85" y="30" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="SeC-mM-B75"/>
-                                    <constraint firstAttribute="width" constant="250" id="VC1-kA-F8j"/>
+                                    <constraint firstAttribute="height" constant="150" id="SeC-mM-B75"/>
+                                    <constraint firstAttribute="width" constant="150" id="VC1-kA-F8j"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.42352941176470588" green="0.45882352941176469" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2fB-Qi-O2s" firstAttribute="top" secondItem="o5n-F9-lZB" secondAttribute="bottom" constant="137" id="BDx-3Z-pMa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2fB-Qi-O2s" secondAttribute="bottom" constant="50" id="0eP-S1-MbN"/>
                             <constraint firstItem="2fB-Qi-O2s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LBs-6g-WDi"/>
                             <constraint firstItem="o5n-F9-lZB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bex-Tc-iIQ"/>
-                            <constraint firstItem="o5n-F9-lZB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="iOO-AN-goL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="2fB-Qi-O2s" secondAttribute="bottom" constant="239" id="yEv-k9-fdp"/>
+                            <constraint firstItem="o5n-F9-lZB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="iOO-AN-goL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gt7-Rq-Ld1"/>
                     <connections>
                         <outlet property="imageView" destination="o5n-F9-lZB" id="F00-WU-4rX"/>
                         <outlet property="openButton" destination="2fB-Qi-O2s" id="Hmg-aT-JUU"/>
+                        <segue destination="qRr-EE-JU3" kind="show" identifier="showGradientVCSegue" id="vdK-ii-pkb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -63,7 +63,7 @@
             <objects>
                 <viewController id="qRr-EE-JU3" customClass="GradientVC" customModule="CALayerExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRY-Q4-xgV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HuY-tW-1vQ"/>
                         <color key="backgroundColor" red="0.42352941179999998" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,7 +76,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="food_image" width="273.33334350585938" height="225.66667175292969"/>
+        <image name="food_image" width="410" height="338.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
