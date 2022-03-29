@@ -60,14 +60,12 @@
 		1256B3F827F3688200E4EA64 /* CALayerExample */ = {
 			isa = PBXGroup;
 			children = (
-				1256B3F927F3688200E4EA64 /* AppDelegate.swift */,
-				1256B3FB27F3688200E4EA64 /* SceneDelegate.swift */,
-				1256B41127F36A4300E4EA64 /* VC */,
 				1256B3FF27F3688200E4EA64 /* Main.storyboard */,
-				1256B40227F3688300E4EA64 /* Assets.xcassets */,
 				1256B40427F3688300E4EA64 /* LaunchScreen.storyboard */,
+				12BD47ED27F38A7100193F15 /* Delegates */,
+				1256B41127F36A4300E4EA64 /* VC */,
+				12BD47EE27F38AD800193F15 /* Resources */,
 				1256B40727F3688300E4EA64 /* Info.plist */,
-				1256B40D27F3695E00E4EA64 /* Images.xcassets */,
 			);
 			path = CALayerExample;
 			sourceTree = "<group>";
@@ -79,6 +77,24 @@
 				1256B40F27F36A2500E4EA64 /* GradientVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		12BD47ED27F38A7100193F15 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1256B3F927F3688200E4EA64 /* AppDelegate.swift */,
+				1256B3FB27F3688200E4EA64 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		12BD47EE27F38AD800193F15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1256B40227F3688300E4EA64 /* Assets.xcassets */,
+				1256B40D27F3695E00E4EA64 /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
