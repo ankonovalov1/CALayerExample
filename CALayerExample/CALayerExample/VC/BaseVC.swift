@@ -2,7 +2,7 @@ import UIKit
 
 let topBarHeight = 20.0
 
-class BaseVC: UIViewController {
+final class BaseVC: UIViewController  {
     
     // MARK: Views properties
     
@@ -72,10 +72,14 @@ class BaseVC: UIViewController {
     // MARK: @IBActions
     
     @IBAction func openTapped(_ sender: Any) {
-        loadingShapeLayer.strokeEnd += 0.2
-        if loadingShapeLayer.strokeEnd == 1 {
-            performSegue(withIdentifier: "showGradientVCSegue", sender: self)
-        }
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.toValue = 1
+        animation.duration = 3
+        animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+        animation.delegate = self
+        loadingShapeLayer.add(animation, forKey: "strokeEnd")
+     
     }
     
     // MARK: Private func
@@ -86,6 +90,14 @@ class BaseVC: UIViewController {
         path.move(to: CGPoint(x: self.view.frame.width / 2 - 100, y: self.view.frame.height / 2))
         path.addLine(to: CGPoint(x: self.view.frame.width / 2 + 100, y: self.view.frame.height / 2))
         shapeLayer.path = path.cgPath
+    }
+    
+}
+
+extension BaseVC: CAAnimationDelegate {
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        performSegue(withIdentifier: "showGradientVCSegue", sender: self)
     }
     
 }
